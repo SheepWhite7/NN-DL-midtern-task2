@@ -49,10 +49,20 @@ python demo/image_demo.py demo/demo.jpg rtmdet_tiny_8xb32-300e_coco.py --weights
 
 ## 四、数据准备（以VOC数据集为例，COCO数据集可直接跳到「修改配置文件」步骤）
 1. **下载数据**
-    - 下载VOC2012训练验证集：
+    - 下载VOC2012数据集：
     ```bash
     wget https://pjreddie.com/media/files/VOCtrainval_11-May-2012.tar  
     tar -xvf VOCtrainval_11-May-2012.tar
+    ```
+    - 下载COCO数据集：
+    ```bash
+    wget http://images.cocodataset.org/zips/train2017.zip
+    wget http://images.cocodataset.org/zips/val2017.zip
+    wget http://images.cocodataset.org/annotations/annotations_trainval2017.zip
+
+    unzip train2017.zip
+    unzip val2017.zip
+    unzip annotations_trainval2017.zip
     ```
 2. **转化为COCO格式**
 切换到`mmdetection`目录，执行数据格式转换脚本：
