@@ -47,7 +47,7 @@ python demo/image_demo.py demo/demo.jpg rtmdet_tiny_8xb32-300e_coco.py --weights
 ```
 检测结果会保存在当前文件夹下的`outputs/vis`文件夹中，名为`demo.jpg`，图片包含网络预测的检测框。
 
-## 四、数据准备（以VOC数据集为例，COCO数据集可直接跳到「修改配置文件」步骤）
+## 四、数据准备
 1. **下载数据**
     - 下载VOC2012数据集：
     ```bash
@@ -64,13 +64,13 @@ python demo/image_demo.py demo/demo.jpg rtmdet_tiny_8xb32-300e_coco.py --weights
     unzip val2017.zip
     unzip annotations_trainval2017.zip
     ```
-2. **转化为COCO格式**
+2. （如果是VOC数据集）**转化为COCO格式**
 切换到`mmdetection`目录，执行数据格式转换脚本：
 ```bash
 cd mmdetection
 python /mmdetection/data/data_process.py
 ```
-3. **提取实例分割标注信息**
+3. （如果是VOC数据集）**提取实例分割标注信息**
 执行实例分割标注提取脚本：
 ```bash
 python /mmdetection/data/segment_extract.py
