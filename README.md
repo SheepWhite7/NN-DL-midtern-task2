@@ -95,5 +95,5 @@ python tools/test.py /mmdetection/configs/rpn/rpn_r50_fpn_1x_coco.py  /mmdetecti
 ```
 9. **使用保存好的checkpoint可视化自己的图片**
 ```bash
-python demo/image_demo.py     /mmdetection/data/my_image/img1.jpg     /mmdetection/configs/mask_rcnn/mask-rcnn_r50_fpn_1x_coco.py     --weights /mnt/tidal-alsh01/usr/yangshiyue/mmdetection/work_dirs/mask-rcnn_r50_fpn_1x_coco_real/epoch_12.pth     --out-dir ./output_my_image
+python demo/image_demo.py /mmdetection/data/my_image/img1.jpg /mmdetection/configs/mask_rcnn/mask-rcnn_r50_fpn_1x_coco.py     --weights /mnt/tidal-alsh01/usr/yangshiyue/mmdetection/work_dirs/mask-rcnn_r50_fpn_1x_coco_real/epoch_12.pth     --out-dir ./output_my_image
 ```
