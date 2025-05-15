@@ -1,4 +1,4 @@
-# MMDetection框架下基于VOC数据集的目标检测训练与实践教程
+# MMDetection框架下基于VOC和COCo数据集的实例分割、目标检测训练与实践
 本教程详细介绍如何在MMDetection框架下，使用Pytorch环境对VOC数据集进行目标检测任务的训练、测试及结果可视化。
 
 ## 一、创建Pytorch环境
@@ -84,11 +84,11 @@ python /mmdetection/data/segment_extract.py
 5. **开始训练**
     - **Mask-RCNN训练**：
     ```bash
-    python tools/train.py configs/mask_rcnn/mask-rcnn_r50_fpn_1x_coco.py --work-dir ./work_dirs/mask-rcnn_r50_fpn_1x_coco
+    torchrun --nproc_per_node=4 tools/train.py configs/mask_rcnn/mask-rcnn_r50_fpn_1x_coco.py --work-dir ./work_dirs/mask-rcnn_r50_fpn_1x_coco --launcher pytorch
     ```
     - **Sparse-RCNN训练**：
     ```bash
-    python tools/train.py configs/sparse_rcnn/sparse-rcnn_r50_fpn_1x_coco.py --work-dir ./work_dirs/sparse-rcnn_r50_fpn_1x_coco
+    torchrun --nproc_per_node=4 tools/train.py configs/sparse_rcnn/sparse-rcnn_r50_fpn_1x_coco.py --work-dir ./work_dirs/sparse-rcnn_r50_fpn_1x_coco --launcher pytorch
     ```
 6. **查看tensorboard**
 以Mask-RCNN为例（Sparse-RCNN只需更改配置文件路径），启动tensorboard：
