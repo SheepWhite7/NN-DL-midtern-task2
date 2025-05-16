@@ -1,5 +1,5 @@
 # MMDetection框架下基于VOC和COCO数据集的实例分割、目标检测训练与实践
-本教程详细介绍如何在MMDetection框架下，使用Pytorch环境对VOC数据集进行目标检测任务的训练、测试及结果可视化。由于数据文件较大，github中仅包含data_process.py和segment_extract.py，其余文件的生成均可通过下述操作执行。
+本教程详细介绍如何在MMDetection框架下，使用Pytorch环境对VOC数据集进行目标检测任务的训练、测试及结果可视化。由于数据文件较大，github中仅包含data_process.py和segment_extract.py，其余文件均可通过下述操作生成。
 
 ## 一、创建Pytorch环境
 1. 使用conda创建名为`openmmlab`的环境，并指定Python版本为3.8：
